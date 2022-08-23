@@ -1,0 +1,17 @@
+{
+  "name": "take-the-fun-out-of-yahtzee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.4.1",
+    "bootstrap-validator": "^0.11.9",
+    "jquery": "^3.5.1"
+  }
+}

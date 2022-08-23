@@ -1,0 +1,134 @@
+/*START helper classes handy-solutions.de and subdomains*/
+:root {
+  --themeColorRgb: rgb(0, 250, 0);
+  --themeColorRgba: rgba(0, 250, 0, 0);
+
+  /* #00fa00 */
+
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+#sectionContent {
+  background-image: url(../images/yahtrix143_light2_new.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 170vh;
+}
+
+label {
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+.ptCustom {
+  padding-top: 100px;
+}
+
+.mtCustom {
+  margin-top: 100px;
+}
+
+.bgThemeColor {
+  background-color: var(--themeColorRgb);
+}
+/*END helper classes handy-solutions.de and subdomains*/
+
+/*START: custom button handy-solutions.de and subdomains*/
+.btn-primary {
+  color: var(--light);
+  background-color: var(--themeColorRgb);
+  border-color: var(--themeColorRgb);
+}
+
+.btn-primary:hover {
+  color: var(--light);
+  background-color: var(--themeColorRgb);
+  border-color: var(--themeColorRgb);
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem var(--themeColorRgba);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: var(--light);
+  background-color: var(--themeColorRgb);
+  border-color: var(--themeColorRgb);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: var(--light);
+  background-color: var(--themeColorRgb);
+  border-color: var(--themeColorRgb);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem var(--themeColorRgba);
+}
+
+label img{
+  width: 30px;
+}
+
+  /* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+
+
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+
+.blank_row
+{
+    height: 10px ; /* overwrites any other rules */
+    /*background-color: #FFFFFF;*/
+}
+/*END: custom button handy-solutions.de and subdomains*/
+
+/*START general layout handy-solutions.de/yahtzee*/
+
+/*END general layout handy-solutions.de/yahtzee*/

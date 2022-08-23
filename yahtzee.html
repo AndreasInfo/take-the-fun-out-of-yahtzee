@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Andreas Rimmelspacher">
+	<meta name="description" content="Yahtzee">
+	<meta name="keywords" content="Yahtzee">
+	<title>Yahtzee</title>
+
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/css/main.css?version=1.0">
+
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div id="sectionNavigation" class="row bg-dark fixed-top">
+			<div class="col-12">
+				<nav class="navbar navbar-expand-md bg-dark navbar-dark h5">
+					<a class="navbar-brand my-n3 pt-3" href="https://handy-solutions.de">
+						<img class="img-fluid" src="src/logo/logo_v2.1_small.svg" alt="Official handy-solutions logo"
+							style="max-width: 40px; width: 100%; height: auto" />
+					</a>
+					<ul class="navbar-nav">
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- <div id="sectionHeader" class="row bgThemeColor text-light text-center mtCustom py-3">
+			<div class="col-12">
+				<h1>Take the fun out of Yahtzee</h1>
+			</div>
+		</div> -->
+
+
+		<div id="sectionContent" class="row bg-light text-dark ptCustom">
+			<div class="col-lg-6 text-center">
+				<form id="dice_form" action="">
+					<label>
+						<input type="radio" name="dice1" value=0 checked>
+						<img src="src/images/dice0.png">
+					</label>
+					<label>
+						<input type="radio" name="dice1" value=1>
+						<img src="src/images/dice1.png">
+					</label>
+					<label>
+						<input type="radio" name="dice1" value=2>
+						<img src="src/images/dice2.png">
+					</label>
+					<label>
+						<input type="radio" name="dice1" value=3>
+						<img src="src/images/dice3.png">
+					</label>
+					<label>
+						<input type="radio" name="dice1" value=4>
+						<img src="src/images/dice4.png">
+					</label>
+					<label>
+						<input type="radio" name="dice1" value=5>
+						<img src="src/images/dice5.png">
+					</label>
+					<label>
+						<input type="radio" name="dice1" value=6>
+						<img src="src/images/dice6.png">
+					</label>
+					<br />
+
+					<label>
+						<input type="radio" name="dice2" value=0 checked>
+						<img src="src/images/dice0.png">
+					</label>
+
+					<label>
+						<input type="radio" name="dice2" value=1>
+						<img src="src/images/dice1.png">
+					</label>
+					<label>
+						<input type="radio" name="dice2" value=2>
+						<img src="src/images/dice2.png">
+					</label>
+					<label>
+						<input type="radio" name="dice2" value=3>
+						<img src="src/images/dice3.png">
+					</label>
+					<label>
+						<input type="radio" name="dice2" value=4>
+						<img src="src/images/dice4.png">
+					</label>
+					<label>
+						<input type="radio" name="dice2" value=5>
+						<img src="src/images/dice5.png">
+					</label>
+					<label>
+						<input type="radio" name="dice2" value=6>
+						<img src="src/images/dice6.png">
+					</label>
+					<br />
+
+
+					<label>
+						<input type="radio" name="dice3" value=0 checked>
+						<img src="src/images/dice0.png">
+					</label>
+
+					<label>
+						<input type="radio" name="dice3" value=1>
+						<img src="src/images/dice1.png">
+					</label>
+					<label>
+						<input type="radio" name="dice3" value=2>
+						<img src="src/images/dice2.png">
+					</label>
+					<label>
+						<input type="radio" name="dice3" value=3>
+						<img src="src/images/dice3.png">
+					</label>
+					<label>
+						<input type="radio" name="dice3" value=4>
+						<img src="src/images/dice4.png">
+					</label>
+					<label>
+						<input type="radio" name="dice3" value=5>
+						<img src="src/images/dice5.png">
+					</label>
+					<label>
+						<input type="radio" name="dice3" value=6>
+						<img src="src/images/dice6.png">
+					</label>
+					<br />
+
+					<label>
+						<input type="radio" name="dice4" value=0 checked>
+						<img src="src/images/dice0.png">
+					</label>
+
+					<label>
+						<input type="radio" name="dice4" value=1>
+						<img src="src/images/dice1.png">
+					</label>
+					<label>
+						<input type="radio" name="dice4" value=2>
+						<img src="src/images/dice2.png">
+					</label>
+					<label>
+						<input type="radio" name="dice4" value=3>
+						<img src="src/images/dice3.png">
+					</label>
+					<label>
+						<input type="radio" name="dice4" value=4>
+						<img src="src/images/dice4.png">
+					</label>
+					<label>
+						<input type="radio" name="dice4" value=5>
+						<img src="src/images/dice5.png">
+					</label>
+					<label>
+						<input type="radio" name="dice4" value=6>
+						<img src="src/images/dice6.png">
+					</label>
+					<br />
+
+					<label>
+						<input type="radio" name="dice5" value=0 checked>
+						<img src="src/images/dice0.png">
+					</label>
+
+					<label>
+						<input type="radio" name="dice5" value=1>
+						<img src="src/images/dice1.png">
+					</label>
+					<label>
+						<input type="radio" name="dice5" value=2>
+						<img src="src/images/dice2.png">
+					</label>
+					<label>
+						<input type="radio" name="dice5" value=3>
+						<img src="src/images/dice3.png">
+					</label>
+					<label>
+						<input type="radio" name="dice5" value=4>
+						<img src="src/images/dice4.png">
+					</label>
+					<label>
+						<input type="radio" name="dice5" value=5>
+						<img src="src/images/dice5.png">
+					</label>
+					<label>
+						<input type="radio" name="dice5" value=6>
+						<img src="src/images/dice6.png">
+					</label>
+					<br />
+					<br />
+
+
+					<label>
+						<input type="radio" name="tries" value=1>
+						<img src="src/images/onecup.png" style="width:70px !important">
+					</label>
+					<label>
+						<input type="radio" name="tries" value=2>
+						<img src="src/images/twocups.png" style="width:70px !important">
+					</label>
+					<label>
+						<input type="radio" name="tries" value=3 checked>
+						<img src="src/images/threecups.png" style="width:70px !important">
+					</label>
+					<br />
+
+
+
+
+					<!-- 					<div class="form-group">
+						<label for="tries_left">Tries left</label>
+						<input type="number" class="form-control" id="tries_left" min="1" max="99" value="1">
+					</div> -->
+				</form>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="container">
+
+					<table class="table table-dark table-hover">
+						<!-- <thead>
+				      <tr>
+				        <th></th>
+				        <th>Lastname</th>
+				        <th>Email</th>
+				      </tr>
+				    </thead> -->
+						<tbody>
+							<tr>
+								<td></td>
+								<td class="text-center"> <img src="src/images/any3dice.png" alt="" border=3 height=7
+										width=auto></img></td>
+								<td class="text-center"> <img src="src/images/any4dice.png" alt="" border=3 height=7
+										width=auto></img></td>
+								<td class="text-center"> <img src="src/images/any5dice.png" alt="" border=3 height=7
+										width=auto></img></td>
+							</tr>
+
+							<tr>
+								<td class="text-center"><img src="src/images/dice1.png" alt="" border=3 height=20
+										width=auto></img></td>
+								<td class="text-center" id="threeOnes">10%</td>
+								<td class="text-center" id="fourOnes">10%</td>
+								<td class="text-center" id="fiveOnes">10%</td>
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/dice2.png" alt="" border=3 height=20
+										width=20></td>
+								<td class="text-center" id="threeTwos">10%</td>
+								<td class="text-center" id="fourTwos">10%</td>
+								<td class="text-center" id="fiveTwos">10%</td>
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/dice3.png" alt="" border=3 height=20
+										width=20></td>
+								<td class="text-center" id="threeThrees">10%</td>
+								<td class="text-center" id="fourThrees">10%</td>
+								<td class="text-center" id="fiveThrees">10%</td>
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/dice4.png" alt="" border=3 height=20
+										width=20></td>
+								<td class="text-center" id="threeFours">10%</td>
+								<td class="text-center" id="fourFours">10%</td>
+								<td class="text-center" id="fiveFours">10%</td>
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/dice5.png" alt="" border=3 height=20
+										width=20></td>
+								<td class="text-center" id="threeFives">10%</td>
+								<td class="text-center" id="fourFives">10%</td>
+								<td class="text-center" id="fiveFives">10%</td>
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/dice6.png" alt="" border=3 height=20
+										width=20></td>
+								<td class="text-center" id="threeSixes">10%</td>
+								<td class="text-center" id="fourSixes">10%</td>
+								<td class="text-center" id="fiveSixes">10%</td>
+							</tr>
+							<tr class="blank_row">
+								<td colspan="4"></td>
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/fullHouse.png" alt="" border=3 height=20
+										width=auto></td>
+								<td class="text-center" id="fullHouse">10%</td>
+
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/smallStraight.png" alt="" border=3
+										height=20 width=auto></td>
+								<td class="text-center" id="smallStraight">10%</td>
+
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/largeStraight.png" alt="" border=3
+										height=20 width=auto></td>
+								<td class="text-center" id="largeStraight">10%</td>
+
+							</tr>
+							<tr>
+								<td class="text-center"><img src="src/images/any5dice.png" alt="" border=3 height=10
+										width=auto></td>
+								<td class="text-center" id="yahtzee">10%</td>
+
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+			<!-- 			<div class="col-sm-3">
+			</div> -->
+
+			<!-- 			<div class="col-sm-6">
+				<form id="my_form" action="">
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="dice_1">Dice 1</label>
+								<input type="number" class="form-control" id="dice_1" min="0" max="6" value="1">
+							</div>
+							<div class="form-group">
+								<label for="dice_2">Dice 2</label>
+								<input type="number" class="form-control" id="dice_2" min="0" max="6" value="2">
+							</div>
+							<div class="form-group">
+								<label for="dice_3">Dice 3</label>
+								<input type="number" class="form-control" id="dice_3" min="0" max="6" value="3">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="dice_4">Dice 4</label>
+								<input type="number" class="form-control" id="dice_4" min="0" max="6" value="4">
+							</div>
+							<div class="form-group">
+								<label for="dice_5">Dice 5</label>
+								<input type="number" class="form-control" id="dice_5" min="0" max="6" value="5">
+							</div>
+							<div class="form-group">
+								<label for="tries_left">Tries left</label>
+								<input type="number" class="form-control" id="tries_left" min="1" max="3" value="1">
+							</div>
+						</div>
+					</div>
+					<button id="submit_this" type="submit" class="btn btn-primary">Run</button>
+				</form>
+			</div>
+			<div class="col-sm-3">
+				
+			 -->
+		</div>
+
+		<!-- The Modal -->
+		<div class="modal" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 id="modal-title" class="modal-title"></h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div id="modal-body" class="modal-body">
+
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./node_modules/bootstrap-validator/dist/validator.min.js"></script>
+	<script src="src/js/yahtzee.js?version=1.0"></script>
+
+	<script>updateProbabilites();</script>
+
+</body>
+
+</html>
